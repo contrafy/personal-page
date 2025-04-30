@@ -74,7 +74,7 @@ const About = () => {
             
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-stone-100">Ahmad Raaiyan</h1>
-              <h2 className="text-xl md:text-2xl text-red-400 mb-6">SysAdmin & Software Developer</h2>
+              <h2 className="text-xl md:text-2xl text-red-400 mb-6">SysAdmin, Software Developer, Lifelong Learner</h2>
               <p className="text-stone-300 md:text-xl max-w-2xl">
                 As a senior CS student at Texas A&M University, I blend systems administration expertise with software development skills. Currently working as a SysAdmin for University Libraries, I specialize in Kubernetes orchestration and cloud infrastructure.
               </p>
@@ -130,7 +130,7 @@ const About = () => {
                 <p className="text-stone-300">
                   Howdy!
 
-                  My name's Ahmad, and I’m currently a Computer Science senior at Texas A&M University with a passion for designing software, maintaining distributed systems, and just about the entire broad field of computing. Born and raised in Michigan, my fascination with computers began early, sparked by curiosity about operating systems internals and proliferated by taking a forbidden peek inside the heart of games I loved playing (Halo 3 and Assassin’s Creed 2 are my all-time favorites). My initial explorations into game internals led me deep into the world of OS internals, which ultimately culminated in an unwavering passion for Linux/FOSS and an appreciation for the unspoken heroes of our modern technological miracles, <a href="https://github.com/FFmpeg/FFmpeg" className="underline italic">looking at you pal...</a>
+                  My name's Ahmad, and I’m currently a Computer Science senior at Texas A&M University with a passion for designing software and maintaining distributed systems. Born and raised in Michigan, my fascination with computers began early, sparked by curiosity about operating systems internals and proliferated by taking a forbidden peek inside the heart of games I loved playing (Halo 3 and Assassin’s Creed 2 are my all-time favorites). My initial explorations into game internals led me deep into the world of OS internals, which ultimately culminated in an unwavering passion for Linux/FOSS and an appreciation for the unspoken heroes of our modern technological miracles, <a href="https://github.com/FFmpeg/FFmpeg" className="underline italic">looking at you pal...</a>
                 </p>
                 
                 <p className="text-stone-300">

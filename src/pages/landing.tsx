@@ -45,7 +45,6 @@ const AnimatedBackground = ({ splineUrl }: AnimatedBackgroundProps) => {
   if (splineUrl) {
     return (
       <div className="absolute inset-0 z-0 opacity-60">
-        {/* Uncomment when you have Spline subscription */}
         {/* <Spline scene={splineUrl} /> */}
         <div className="flex items-center justify-center h-full text-stone-700">
           Spline will render here: {splineUrl}
@@ -139,9 +138,10 @@ const Landing = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-stone-300 max-w-2xl mx-auto mb-8">
-              Senior CS undergrad at TAMU, transforming complex systems into elegant solutions
+              Howdy!
             </p>
             
+            {/* Socials */}
             <div className="flex gap-6 justify-center mb-10">
               <motion.a 
                 href="https://github.com/contrafy" 
@@ -163,6 +163,7 @@ const Landing = () => {
               </motion.a>
             </div>
             
+            {/* About Me button */}
             <a href="/about">
               <Button 
                 variant="outline" 
@@ -174,7 +175,7 @@ const Landing = () => {
           </motion.div>
         </div>
         
-        {/* Scroll Indicator */}
+        {/* Bouncing Terminal icon */}
         <motion.div 
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
