@@ -112,9 +112,8 @@ const AnimatedBackground = ({ splineUrl }: AnimatedBackgroundProps) => {
     </div>
   );
 };
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 const Landing = () => {
-  // Spline URL can be set here when you have a subscription
   const splineUrl: string = "";
   
   return (
