@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LucideIcon, ExternalLink, Github, Search, Terminal, Smartphone, Cloud, BrainCircuit, Building2, Users, Globe, Network, Code, Palette, LineChart, Coins } from 'lucide-react';
-import Navbar from '../components/Navbar';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardFooter } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
@@ -106,7 +105,6 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-900 to-stone-950 text-stone-100 pt-20">
-      <Navbar />
       
       <div className="container mx-auto px-4 py-12">
         <motion.div 

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Navbar from '../components/Navbar';
 import { Separator } from '../components/ui/separator';
 
 const Shop = () => {
@@ -11,7 +10,6 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-900 to-stone-950 text-stone-100 pt-20">
-      <Navbar />
 
       <div className="container mx-auto px-4 py-12">
         <motion.div 

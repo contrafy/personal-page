@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Terminal, Server, Monitor, GraduationCap } from 'lucide-react';
-import Navbar from '../components/Navbar';
 // import { Card, CardContent } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
@@ -48,7 +47,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-900 to-stone-950 text-stone-100 pt-20">
-      <Navbar />
       
       <div className="container mx-auto px-4 py-12">
         <motion.div 

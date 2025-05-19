@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, ChevronDown, Terminal } from 'lucide-react';
-import Navbar from '../components/Navbar';
 import { Button } from '../components/ui/button';
 
 interface Particle {
@@ -119,7 +118,6 @@ const Landing = () => {
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-950 to-stone-900 text-stone-50">
-      <Navbar />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">

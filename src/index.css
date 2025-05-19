@@ -206,3 +206,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* GLOBAL BACKDROP — this sits under every route/animation */
+html,
+body,
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* stone‑950 → stone‑900 gradient */
+  background: linear-gradient(to bottom, #0c0a09, #1c1917);
+  color: #fafaf9;        /* stone‑50 */
+  overflow-x: hidden;
+}
+
+/* optional – if you still want the CSS‑variable driven palette elsewhere   */
+/* override the “white” default so page‑transition fade outs never flash   */
+:root {
+  --background: #0c0a09; /* stone‑950 – plain hex avoids HSL/OKLCH quirks */
+}
