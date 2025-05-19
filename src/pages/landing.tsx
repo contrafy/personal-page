@@ -162,12 +162,22 @@ const Landing = () => {
                 <Linkedin size={28} />
               </motion.a>
             </div>
-            
+
+            {/* Projects button */}
+            <a href="/projects">
+              <Button 
+                variant="outline" 
+                className="border-red-500 bg-red-500/10 text-red-400 mx-5 transition-all"
+              >
+                Projects
+              </Button>
+            </a>
+
             {/* About Me button */}
             <a href="/about">
               <Button 
                 variant="outline" 
-                className="border-red-500 bg-red-500/10 text-red-400 transition-all"
+                className="border-red-500 bg-red-500/10 text-red-400 mx-5 transition-all"
               >
                 About Me
               </Button>
