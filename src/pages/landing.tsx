@@ -117,7 +117,7 @@ const Landing = () => {
   const splineUrl: string = "";
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-stone-950 to-stone-900 text-stone-50">
+    <div className="min-h-screen text-stone-50">
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">

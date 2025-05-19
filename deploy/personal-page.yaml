@@ -33,6 +33,7 @@ spec:
               mountPath: /etc/nginx/conf.d
       imagePullSecrets:
         - name: ghcr-creds
+      imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

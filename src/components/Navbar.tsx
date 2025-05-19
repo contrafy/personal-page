@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
@@ -36,7 +36,7 @@ const Navbar = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-stone-950/90 backdrop-blur-md' : 'bg-transparent'
       }`}
@@ -55,27 +55,28 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.a
-                key={item.path}
-                href={item.path}
-                className={`relative px-2 py-1 text-lg transition-colors ${
-                  isActive(item.path) 
-                    ? 'text-red-400' 
-                    : 'text-stone-300 hover:text-red-300'
-                }`}
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
+              <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `relative px-2 py-1 text-lg transition-colors ${
+                  isActive
+                    ? "text-red-400"
+                    : "text-stone-300 hover:text-red-300"
+                }`
+              }
+              end={item.path === "/"}  // so index "/" only matches exactly
               >
-                {item.label}
+              {item.label}
                 {isActive(item.path) && (
                   <motion.div
                     layoutId="navbar-indicator"
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-500"
                     initial={false}
-                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                    transition={{ type: 'spring', duration: 0.5, bounce: 0.25 }}
                   />
                 )}
-              </motion.a>
+              </NavLink>
             ))}
           </nav>
           
