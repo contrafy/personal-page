@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, ChevronDown, Terminal } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import { NavLink } from 'react-router-dom';
 
 interface Particle {
   id: number;
@@ -162,24 +163,24 @@ const Landing = () => {
             </div>
 
             {/* Projects button */}
-            <a href="/projects">
+            <NavLink to="/projects">
               <Button 
                 variant="outline" 
                 className="border-red-500 bg-red-500/10 text-red-400 mx-5 transition-all"
               >
                 Projects
               </Button>
-            </a>
+            </NavLink>
 
             {/* About Me button */}
-            <a href="/about">
+            <NavLink to="/about">
               <Button 
                 variant="outline" 
                 className="border-red-500 bg-red-500/10 text-red-400 mx-5 transition-all"
               >
                 About Me
               </Button>
-            </a>
+            </NavLink>
           </motion.div>
         </div>
         
