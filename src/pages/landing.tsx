@@ -8,6 +8,7 @@ import ProjectOverviewCard from '@/components/ProjectOverviewCard';
 
 import { timelineItems } from '@/pages/about';
 import { projectsData } from '@/pages/projects';
+
 import SkillsSection from '@/components/SkillsSection';
 
 const Landing = () => (
