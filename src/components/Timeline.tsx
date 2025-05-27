@@ -1,6 +1,7 @@
 import { FC, ReactElement } from 'react';
 import { motion } from 'framer-motion';
 import { Separator } from './ui/separator';
+import { GraduationCap } from 'lucide-react';
 
 export interface TimelineItem {
   year: string;
@@ -23,7 +24,10 @@ const Timeline: FC<TimelineProps> = ({ heading, items }) => (
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-2xl font-bold mb-6">{heading}</h2>
+      <h2 className="text-2xl font-bold mb-6 flex items-center">
+        <GraduationCap className="mr-2 text-red-500" />
+        {heading}
+      </h2>
       <Separator className="mb-8 bg-red-800/50" />
 
       <div className="space-y-6">

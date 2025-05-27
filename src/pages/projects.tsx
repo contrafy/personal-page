@@ -4,81 +4,83 @@ import { Button } from '../components/ui/button';
 import { Separator } from '../components/ui/separator';
 import ProjectOverviewCard from '@/components/ProjectOverviewCard';
 
+export const projectsData = [
+  {
+    title: 'Gatekeeper',
+    description: 'Senior Capstone Project mentored by Google SWE Manager Nitin Mittal. LLM-powered agent that generates GCP IAM policy bindings from natural language. Features a fine-tuned dataset pipeline and integration with user orgs for direct policy application.',
+    image: null,
+    icons: ['Cloud', 'BrainCircuit'],
+    tags: ['Google Cloud', 'ML', 'Python', 'NLP', 'Cloud', 'Web', 'React'],
+    github: 'https://github.com/contrafy/gatekeeper',
+    demo: null,
+    featured: false
+  },
+  {
+    title: 'Career Builder',
+    description: 'Web App that quickly finds job postings most in line with the user\'s skills and interests, based off their resume/CV. Uses LLM API\'s to personalize job search for the user, and improve their resume/CV.',
+    image: null,
+    icons: ['BrainCircuit', 'Globe'],
+    tags: ['React', 'FastAPI', 'Typescript', 'Python', 'LLM API\'s', 'Tailwind', 'framer-motion', 'Native'],
+    github: 'https://github.com/contrafy/career-build-ui',
+    demo: null,
+    featured: true
+  },
+  {
+    title: 'Precision Funding',
+    description: 'Complete platform for a Prop Trading firm with a modern frontend and integrated payment system. Handles user accounts, trading challenges, and automated invoice management.',
+    image: null,
+    icons: ['LineChart', 'Coins'],
+    tags: ['React', 'NextJS', 'Firebase', 'Stripe', 'Vercel', 'Web'],
+    github: null,
+    demo: 'https://precisionfunding.vip',
+    featured: false
+  },
+  {
+    title: 'Web Crawler',
+    description: 'Multithreaded C++ web crawler built with WinSock. Parses, filters, and queues links recursively while collecting page-level statistics at scale.',
+    image: null,
+    icons: ['Globe', 'Network'],
+    tags: ['C++', 'Winsock', 'Networking', 'HTTP', 'Native'],
+    github: "https://github.com/contrafy/win-crawl",
+    demo: null,
+    featured: false
+  },
+  {
+    title: 'Aggies in Real Estate Portal',
+    description: 'Full-stack Rails app for a Texas A&M student organization. Includes member authentication, attendance tracking, event management, and Google OAuth integration.',
+    image: null,
+    icons: ['Building2', 'Users'],
+    tags: ['Ruby', 'Rails', 'PostgreSQL', 'OAuth 2.0', 'Web'],
+    github: null,
+    demo: null,
+    featured: false
+  },
+  {
+    title: 'Pocketmodels',
+    description: 'iOS app and iMessage extension for chatting with LLMs from OpenAI, Anthropic, Groq, and xAI. Supports mid-thread model switching and full API parameter customization (temperature, frequency penalty, etc).',
+    image: null,
+    icons: ['Terminal', 'Smartphone'],
+    tags: ['Swift', 'SwiftUI', 'UIKit', 'Python', 'OpenAI', 'ML', 'iOS', 'Native'],
+    github: null,
+    demo: null,
+    featured: false
+  },
+  {
+    title: 'Personal Portfolio Website',
+    description: 'This website - a modern, responsive portfolio built with Vite, TypeScript, and React. Features 3D Spline animations, framer-motion transitions, and a music wall for visitor interaction.',
+    image: null,
+    icons: ['Code', 'Palette'],
+    tags: ['TypeScript', 'React', 'Vite', 'Nginx', 'Cloudflare', 'Web'],
+    github: 'https://github.com/contrafy/personal-page',
+    demo: 'https://contrafy.me',
+    featured: false
+  }
+];
+
 const Projects = () => {
   const [filter, setFilter] = useState('all');
   
-  const projects = [
-    {
-      title: 'Gatekeeper',
-      description: 'Senior Capstone Project mentored by Google SWE Manager Nitin Mittal. LLM-powered agent that generates GCP IAM policy bindings from natural language. Features a fine-tuned dataset pipeline and integration with user orgs for direct policy application.',
-      image: null,
-      icons: ['Cloud', 'BrainCircuit'],
-      tags: ['Google Cloud', 'ML', 'Python', 'NLP', 'Cloud', 'Web', 'React'],
-      github: 'https://github.com/contrafy/gatekeeper',
-      demo: null,
-      featured: false
-    },
-    {
-      title: 'Career Builder',
-      description: 'Web App that quickly finds job postings most in line with the user\'s skills and interests, based off their resume/CV. Uses LLM API\'s to personalize job search for the user, and improve their resume/CV.',
-      image: null,
-      icons: ['BrainCircuit', 'Globe'],
-      tags: ['React', 'FastAPI', 'Typescript', 'Python', 'LLM API\'s', 'Tailwind', 'framer-motion', 'Native'],
-      github: 'https://github.com/contrafy/career-build-ui',
-      demo: null,
-      featured: true
-    },
-    {
-      title: 'Precision Funding',
-      description: 'Complete platform for a Prop Trading firm with a modern frontend and integrated payment system. Handles user accounts, trading challenges, and automated invoice management.',
-      image: null,
-      icons: ['LineChart', 'Coins'],
-      tags: ['React', 'NextJS', 'Firebase', 'Stripe', 'Vercel', 'Web'],
-      github: null,
-      demo: 'https://precisionfunding.vip',
-      featured: false
-    },
-    {
-      title: 'Web Crawler',
-      description: 'Multithreaded C++ web crawler built with WinSock. Parses, filters, and queues links recursively while collecting page-level statistics at scale.',
-      image: null,
-      icons: ['Globe', 'Network'],
-      tags: ['C++', 'Winsock', 'Networking', 'HTTP', 'Native'],
-      github: "https://github.com/contrafy/win-crawl",
-      demo: null,
-      featured: false
-    },
-    {
-      title: 'Aggies in Real Estate Portal',
-      description: 'Full-stack Rails app for a Texas A&M student organization. Includes member authentication, attendance tracking, event management, and Google OAuth integration.',
-      image: null,
-      icons: ['Building2', 'Users'],
-      tags: ['Ruby', 'Rails', 'PostgreSQL', 'OAuth 2.0', 'Web'],
-      github: null,
-      demo: null,
-      featured: false
-    },
-    {
-      title: 'Pocketmodels',
-      description: 'iOS app and iMessage extension for chatting with LLMs from OpenAI, Anthropic, Groq, and xAI. Supports mid-thread model switching and full API parameter customization (temperature, frequency penalty, etc).',
-      image: null,
-      icons: ['Terminal', 'Smartphone'],
-      tags: ['Swift', 'SwiftUI', 'UIKit', 'Python', 'OpenAI', 'ML', 'iOS', 'Native'],
-      github: null,
-      demo: null,
-      featured: false
-    },
-    {
-      title: 'Personal Portfolio Website',
-      description: 'This website - a modern, responsive portfolio built with Vite, TypeScript, and React. Features 3D Spline animations, framer-motion transitions, and a music wall for visitor interaction.',
-      image: null,
-      icons: ['Code', 'Palette'],
-      tags: ['TypeScript', 'React', 'Vite', 'Nginx', 'Cloudflare', 'Web'],
-      github: 'https://github.com/contrafy/personal-page',
-      demo: 'https://contrafy.me',
-      featured: false
-    }
-  ];
+  const projects = projectsData;
 
   // const uniqueTags = ['all', ...new Set(projects.flatMap(project => project.tags))];
   

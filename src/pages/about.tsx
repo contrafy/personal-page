@@ -1,10 +1,41 @@
 import { motion } from 'framer-motion';
-import { Terminal, Server, Monitor, GraduationCap } from 'lucide-react';
+import { Terminal, Server, Monitor, GraduationCap, Github, Linkedin } from 'lucide-react';
 import { Separator } from '../components/ui/separator';
 
 import ProfileHeader from '@/components/ProfileHeader';
 import Timeline, { TimelineItem } from '@/components/Timeline';
 import SkillsSection from '@/components/SkillsSection';
+
+export const timelineItems: TimelineItem[] = [
+  {
+    year: '2024 – Present',
+    title: 'Systems Administrator I',
+    place: 'Texas A&M University Libraries',
+    description: 'Architecting and maintaining Rancher-managed Kubernetes infrastructure (bare-metal and virtual clusters), maintaining internal Harbor registries, maintaining virtualization with vSphere, and ensuring infrastructure availability via Infoblox DNS/IPAM and NGINX load balancing.',
+    icon: <Server className="h-5 w-5" />
+  },
+  {
+    year: '2024',
+    title: 'Linux Systems Administrator (Student)',
+    place: 'Texas A&M College of Engineering & ArtsSci',
+    description: 'Administered Ubuntu and RHEL environments for research computing, automated provisioning with Ansible/Chef, deployed and managed bare-metal clusters in data centers, and ensured compliance with stringent security standards.',
+    icon: <Terminal className="h-5 w-5" />
+  },
+  {
+    year: '2023 – 2024',
+    title: 'Systems Administrator (Student)',
+    place: 'Texas A&M Division of Student Affairs',
+    description: 'Managed camera infrastructure (1,000+ endpoints), streamlined Windows deployments and management via SCCM/GPO scripting, and managed MacOS/iOS devices using JAMF and Apple School Manager.',
+    icon: <Monitor className="h-5 w-5" />
+  },
+  {
+    year: '2021 – 2025',
+    title: 'B.S. Computer Science',
+    place: 'Texas A&M University',
+    description: 'Found a keen interest in distributed systems, software architecture, operating systems internals. Developed numerous technical passion projects while completing my degree.',
+    icon: <GraduationCap className="h-5 w-5" />
+  }
+];
 
 const About = () => {
   const fadeIn = {
@@ -12,37 +43,6 @@ const About = () => {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
-  
-  const timelineItems: TimelineItem[] = [
-    {
-      year: '2024 – Present',
-      title: 'Systems Administrator I',
-      place: 'Texas A&M University Libraries',
-      description: 'Architecting and maintaining Rancher-managed Kubernetes infrastructure (bare-metal and virtual clusters), maintaining internal Harbor registries, maintaining virtualization with vSphere, and ensuring infrastructure availability via Infoblox DNS/IPAM and NGINX load balancing.',
-      icon: <Server className="h-5 w-5" />
-    },
-    {
-      year: '2024',
-      title: 'Linux Systems Administrator (Student)',
-      place: 'Texas A&M College of Engineering & ArtsSci',
-      description: 'Administered Ubuntu and RHEL environments for research computing, automated provisioning with Ansible/Chef, deployed and managed bare-metal clusters in data centers, and ensured compliance with stringent security standards.',
-      icon: <Terminal className="h-5 w-5" />
-    },
-    {
-      year: '2023 – 2024',
-      title: 'Systems Administrator (Student)',
-      place: 'Texas A&M Division of Student Affairs',
-      description: 'Managed camera infrastructure (1,000+ endpoints), streamlined Windows deployments and management via SCCM/GPO scripting, and managed MacOS/iOS devices using JAMF and Apple School Manager.',
-      icon: <Monitor className="h-5 w-5" />
-    },
-    {
-      year: '2021 – 2025',
-      title: 'B.S. Computer Science',
-      place: 'Texas A&M University',
-      description: 'Found a keen interest in distributed systems, software architecture, operating systems internals. Developed numerous technical passion projects while completing my degree.',
-      icon: <GraduationCap className="h-5 w-5" />
-    }
-  ];
   
 
   return (
@@ -65,6 +65,10 @@ const About = () => {
                           skills. Currently working as a SysAdmin for University
                           Libraries, I specialize in Kubernetes orchestration and cloud
                           infrastructure."
+             socialLinks={[
+                { href: 'https://github.com/contrafy', icon: Github },
+                { href: 'https://www.linkedin.com/in/ahmad-raaiyan-8a55131a8', icon: Linkedin },
+              ]}
           />
 
           {/* Timeline */}
