@@ -40,7 +40,8 @@ const Landing = () => (
               My Journey
             </h2>
             <Separator className="mb-8 bg-red-800/50" />
-
+            
+            {/* My Journey/Bio Section */}
             <div className="space-y-8 text-stone-300">
               <p>
               Howdy!
