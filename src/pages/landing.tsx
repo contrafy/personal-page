@@ -12,7 +12,7 @@ import { projectsData } from '@/pages/projects';
 import SkillsSection from '@/components/SkillsSection';
 
 const Landing = () => (
-  <div className="min-h-screen bg-gradient-to-b from-stone-900 to-stone-950 text-stone-100 pt-20">
+  <div className="min-h-screen bg-gradient-to-b from-ctp-mantle to-ctp-crust text-ctp-rosewater pt-20">
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-12">
         {/* ─────────────────── left column ─────────────────── */}
@@ -36,13 +36,13 @@ const Landing = () => (
           {/* Bio  */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6 flex items-center">
-              <Terminal className="mr-2 text-red-500" />
+              <Terminal className="mr-2 text-ctp-green" />
               My Journey
             </h2>
-            <Separator className="mb-8 bg-red-800/50" />
+            <Separator className="mb-8 bg-ctp-mauve" />
             
             {/* My Journey/Bio Section */}
-            <div className="space-y-8 text-stone-300">
+            <div className="space-y-8 text-ctp-rosewater/80 text-lg">
               <p>
               Howdy!
               </p>
@@ -56,7 +56,10 @@ const Landing = () => (
               Outside of tech and school, I still find myself deeply connected to the gaming community, being actively involved with Texas A&M eSports for the majority of my university years. These games remain influential in how I view problem-solving and teamwork in technical environments, fostering creativity, adaptability, and persistence in high-pressure scenarios. I also love music of all forms, and recently started learning to play the guitar. Fair warning, Guitar Hero skills don't transfer over to the real deal as well as one might expect, although I still don't regret the countless hours logged on Guitar Hero 3 as a kid.
               </p>
               <p>
-              I'm excited to leverage my combined expertise in infrastructure and software development as I pursue opportunities that challenge and expand my technical skills further. Thanks for taking the time to learn a bit about me, if you found any of this interesting I'd love to connect!
+              I'm excited to leverage my combined expertise in infrastructure and software development as I pursue opportunities that challenge and expand my technical skills further. 
+              </p>
+              <p>
+              Thanks for taking the time to learn a bit about me, if you found any of this interesting I'd love to connect!
               </p>
             </div>
           </section>
@@ -74,11 +77,11 @@ const Landing = () => (
             viewport={{ once: true }}
             className="text-right mb-6"
           >
-            <h2 className="text-2xl font-bold mb-2 flex justify-end items-center">
+            <h2 className="text-2xl font-bold mb-6 flex justify-end items-center">
               Projects
-              <Code className="ml-2 text-red-500" />
+              <Code className="ml-2 text-ctp-green" />
             </h2>
-            <Separator className="bg-red-800/50 ml-auto w-1/2" />
+            <Separator className="bg-ctp-mauve ml-auto w-1/2" />
           </motion.div>
 
           <div className="space-y-6">

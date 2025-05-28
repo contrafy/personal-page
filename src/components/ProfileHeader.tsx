@@ -36,14 +36,14 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
       transition={{ duration: 0.5 }}
       className="relative"
     >
-      <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-red-500 to-red-800 opacity-75 blur" />
-      <Avatar className="h-60 w-60 border-4 border-stone-800 relative overflow-hidden">
+      <div className="absolute -inset-1 rounded-full blur" />
+      <Avatar className="h-60 w-60 border-4 border-ctp-crust relative overflow-hidden">
         <AvatarImage
           src={avatarSrc}
           alt={name}
           className="object-cover w-full h-full rounded-full"
         />
-        <AvatarFallback className="bg-stone-800 text-red-500 text-4xl">
+        <AvatarFallback className="bg-ctp-mantle text-ctp-mauve text-4xl">
           {name
             .split(' ')
             .map((n) => n[0])
@@ -57,13 +57,13 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     <div className="flex-1 w-full flex flex-col md:flex-row md:items-start md:justify-between">
       {/* text */}
       <div className="text-center md:text-left">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-stone-100">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-ctp-rosewater">
           {name}
         </h1>
-        <h2 className="text-xl md:text-2xl text-red-400 mb-6">
+        <h2 className="text-xl md:text-2xl text-ctp-mauve mb-6">
           {subtitle}
         </h2>
-        <p className="text-stone-300 md:text-xl max-w-2xl">
+        <p className="text-ctp-rosewater/80 md:text-xl max-w-2xl">
           {description}
         </p>
       </div>
@@ -77,8 +77,8 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ y: -5, color: '#ef4444' }}
-              className="text-stone-300 hover:text-red-500 transition-colors"
+              whileHover={{ y: -5, color: '#c6a0f6' }}
+              className="text-ctp-rosewater hover:text-ctp-mauve transition-colors"
             >
               <Icon size={28} />
             </motion.a>

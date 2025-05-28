@@ -78,3 +78,24 @@
     --color-ctp-blue: #8aadf4;
     --color-ctp-lavender: #b7bdf8;
 }
+
+/* ───── Catppuccin utilities ───── */
+@layer utilities {
+  /* text */
+  .text-ctp-rosewater { color: var(--color-ctp-rosewater); }
+  .text-ctp-mauve     { color: var(--color-ctp-mauve); }
+  .text-ctp-green     { color: var(--color-ctp-green); }
+
+  /* backgrounds */
+  .bg-ctp-base   { background-color: var(--color-ctp-base); }
+  .bg-ctp-mantle { background-color: var(--color-ctp-mantle); }
+  .bg-ctp-crust  { background-color: var(--color-ctp-crust); }
+
+  /* translucent helpers */
+  .bg-ctp-mauve\/30 { background-color: rgb(var(--color-ctp-mauve)/0.30); }
+  .bg-ctp-mauve\/50 { background-color: rgb(var(--color-ctp-mauve)/0.50); }
+
+  /* gradient stops */
+  .from-ctp-mantle { --tw-gradient-from: var(--color-ctp-mantle); }
+  .to-ctp-crust    { --tw-gradient-to:   var(--color-ctp-crust);  }
+}
