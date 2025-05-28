@@ -47,7 +47,7 @@ const Navbar = () => {
             href="/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-stone-50 font-bold text-2xl"
+            className="text-ctp-rosewater font-bold text-2xl"
           >
             Esc
           </motion.a>
