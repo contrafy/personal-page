@@ -25,10 +25,10 @@ const Timeline: FC<TimelineProps> = ({ heading, items }) => (
       viewport={{ once: true }}
     >
       <h2 className="text-2xl font-bold mb-6 flex items-center">
-        <GraduationCap className="mr-2 text-red-500" />
+        <GraduationCap className="mr-2 text-ctp-green" />
         {heading}
       </h2>
-      <Separator className="mb-8 bg-red-800/50" />
+      <Separator className="mb-8 bg-ctp-mauve" />
 
       <div className="space-y-6">
         {items.map((item, idx) => (
@@ -41,20 +41,20 @@ const Timeline: FC<TimelineProps> = ({ heading, items }) => (
             className="flex gap-4"
           >
             <div className="flex-shrink-0 mt-1">
-              <div className="w-10 h-10 rounded-full bg-stone-800 border border-red-900 flex items-center justify-center text-red-500">
+              <div className="w-10 h-10 rounded-full bg-ctp-mauve/20 border border-ctp-mauve flex items-center justify-center text-ctp-green">
                 {item.icon}
               </div>
             </div>
 
             <div className="pb-6 border-l border-stone-700 pl-6">
-              <div className="px-2 py-1 bg-stone-800 text-red-400 text-sm rounded inline-block mb-2">
+              <div className="px-2 py-1 bg-ctp-base text-ctp-mauve text-sm rounded inline-block mb-2">
                 {item.year}
               </div>
-              <h3 className="text-lg font-semibold text-stone-100">
+              <h3 className="text-lg font-semibold">
                 {item.title}
               </h3>
-              <p className="text-red-400 mb-2">{item.place}</p>
-              <p className="text-stone-400">{item.description}</p>
+              <p className="text-ctp-green mb-2">{item.place}</p>
+              <p className="text-ctp-rosewater/80">{item.description}</p>
             </div>
           </motion.div>
         ))}

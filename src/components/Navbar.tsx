@@ -38,7 +38,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.3 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-stone-950/90 backdrop-blur-md' : 'bg-transparent'
+        scrolled ? 'bg-ctp-crust/90 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -47,7 +47,7 @@ const Navbar = () => {
             href="/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-stone-50 font-bold text-2xl"
+            className="text-ctp-rosewater font-bold text-2xl"
           >
             Esc
           </motion.a>
@@ -61,8 +61,8 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `relative px-2 py-1 text-lg transition-colors ${
                   isActive
-                    ? "text-red-400"
-                    : "text-stone-300 hover:text-red-300"
+                    ? "text-ctp-mauve"
+                    : "text-ctp-rosewater hover:text-ctp-mauve/80"
                 }`
               }
               end={item.path === "/"}  // so index "/" only matches exactly
@@ -71,7 +71,7 @@ const Navbar = () => {
                 {isActive(item.path) && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-500"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-ctp-green"
                     initial={false}
                     transition={{ type: 'spring', duration: 0.5, bounce: 0.25 }}
                   />
@@ -83,11 +83,11 @@ const Navbar = () => {
           {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-stone-200 hover:text-red-400">
+              <Button variant="ghost" size="icon" className="text-ctp-rosewater hover:text-ctp-mauve">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-stone-900 border-stone-800">
+            <SheetContent side="right" className="bg-ctp-base border-ctp-crust">
               <nav className="flex flex-col space-y-6 mt-12">
                 {navItems.map((item) => (
                   <a
@@ -95,8 +95,8 @@ const Navbar = () => {
                     href={item.path}
                     className={`text-xl px-2 py-2 border-l-2 transition-all ${
                       isActive(item.path)
-                        ? 'text-red-400 border-red-500 pl-4'
-                        : 'text-stone-300 border-transparent hover:text-red-300 hover:border-red-400 hover:pl-4'
+                        ? 'text-ctp-mauve border-ctp-mauve pl-4'
+                        : 'text-ctp-rosewater border-transparent hover:text-ctp-mauve hover:border-ctp-mauve hover:pl-4'
                     }`}
                   >
                     {item.label}

@@ -18,13 +18,14 @@ spec:
             name: personal-page-nginx
       containers:
         - name: web
+          imagePullPolicy: Always
           image: ghcr.io/contrafy/personal-page:latest
           ports:
             - containerPort: 80
           resources:
             requests:
-              cpu: "10m"
-              memory: "32Mi"
+              cpu: "50m"
+              memory: "64Mi"
             limits:
               cpu: "200m"
               memory: "128Mi"
@@ -33,7 +34,6 @@ spec:
               mountPath: /etc/nginx/conf.d
       imagePullSecrets:
         - name: ghcr-creds
-      imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

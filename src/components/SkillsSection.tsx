@@ -4,7 +4,8 @@ import {
   Server, 
   Terminal, 
   Code, 
-  Database
+  Database,
+  Settings2
 } from 'lucide-react';
 import { Separator } from '../components/ui/separator';
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
@@ -119,8 +120,11 @@ const SkillsSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
-        <Separator className="mb-8 bg-red-800/50" />
+        <h2 className="text-2xl font-bold mb-6 flex items-center">
+          <Settings2 className="mr-2 text-ctp-green" />
+          Technical Skills
+        </h2>
+        <Separator className="mb-8 bg-ctp-mauve" />
         
         <div className="space-y-8">
           {/* Skill Explorer */}
@@ -135,10 +139,10 @@ const SkillsSection = () => {
                     key={category}
                     variants={itemVariants}
                   >
-                    <Card className="bg-stone-800/50 text-stone-200 border-stone-700 hover:border-red-800/50 transition-all duration-300 h-full">
+                    <Card className="bg-ctp-base/60 border-ctp-crust hover:border-ctp-mauve/50 transition-all duration-300 h-full">
                       <CardHeader className="pb-2">
                         <div className="flex items-center gap-2">
-                          <div className="p-2 rounded-full bg-red-900/20 text-red-500">
+                          <div className="p-2 rounded-full bg-ctp-mauve/20 text-ctp-green">
                             {categories[category]}
                           </div>
                           <CardTitle className="text-lg">{category}</CardTitle>
@@ -149,7 +153,7 @@ const SkillsSection = () => {
                           {skills[category].map(skill => (
                             <Badge 
                               key={skill}
-                              className="bg-stone-700 text-stone-400 hover:bg-red-800 cursor-pointer transition-all"
+                              className="bg-ctp-crust text-ctp-rosewater/80 hover:bg-ctp-mauve/20 cursor-pointer transition-all"
                             >
                               {skill}
                             </Badge>
