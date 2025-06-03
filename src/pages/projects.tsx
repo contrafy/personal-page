@@ -7,7 +7,7 @@ import ProjectOverviewCard from '@/components/ProjectOverviewCard';
 export const projectsData = [
   {
     title: 'Gatekeeper',
-    description: 'Senior Capstone Project mentored by Google SWE Manager Nitin Mittal. LLM-powered agent that generates GCP IAM policy bindings from natural language. Features a fine-tuned dataset pipeline and integration with user orgs for direct policy application.',
+    description: 'Senior Capstone Project mentored by Google SWE Manager. LLM-powered agent that generates GCP IAM policy bindings from natural language. Features a fine-tuned dataset pipeline and integration with user orgs for direct policy application.',
     image: null,
     icons: ['Cloud', 'BrainCircuit'],
     tags: ['Google Cloud', 'ML', 'Python', 'NLP', 'Cloud', 'Web', 'React'],
@@ -67,7 +67,7 @@ export const projectsData = [
   },
   {
     title: 'Personal Portfolio Website',
-    description: 'This website - a modern, responsive portfolio built with Vite, TypeScript, and React. Features 3D Spline animations, framer-motion transitions, and a music wall for visitor interaction.',
+    description: 'This website - a modern, responsive portfolio built with Vite, TypeScript, and React.',
     image: null,
     icons: ['Code', 'Palette'],
     tags: ['TypeScript', 'React', 'Vite', 'Nginx', 'Cloudflare', 'Web'],
